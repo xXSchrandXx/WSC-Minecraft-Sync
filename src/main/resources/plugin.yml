@@ -1,0 +1,14 @@
+name: ${project.artifactId}-bukkit
+main: ${project.groupId}.${project.artifactId}.bukkit.MinecraftSyncBukkit
+version: ${project.version}
+author: xXSchrandXx
+description: WSC-Minecraft-Sync
+api-version: 1.13
+load: STARTUP
+depend: [wscbridge-bukkit]
+
+commands:
+  wscsync:
+    description: Command for WSC-Minecraft-Sync.
+    aliases:
+    - wscsyncbukkit

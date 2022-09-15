@@ -1,0 +1,12 @@
+name: ${project.artifactId}-bungee
+main: ${project.groupId}.${project.artifactId}.bungee.MinecraftSyncBungee
+version: ${project.version}
+author: xXSchrandXx
+description: WSC-Minecraft-Sync
+depends: [wscbridge-bungee]
+
+commands:
+  wscsync:
+    description: Command for WSC-Minecraft-Sync.
+    aliases:
+    - wscsyncbungee
