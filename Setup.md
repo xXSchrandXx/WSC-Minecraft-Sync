@@ -1,4 +1,4 @@
-# Setting up Minecraft-Linker
+# Setting up WSC-Minecraft-Sync
 [German](#German) | [English](#English)
 
 ## English
