@@ -6,6 +6,7 @@ description: WSC-Minecraft-Sync
 api-version: 1.13
 load: STARTUP
 depend: [wscbridge-bukkit]
+softdepend: [CloudNet-Perms, LuckPerms, Vault]
 
 commands:
   wscsync:

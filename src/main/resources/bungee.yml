@@ -4,6 +4,7 @@ version: ${project.version}
 author: xXSchrandXx
 description: WSC-Minecraft-Sync
 depends: [wscbridge-bungee]
+softdepend: [CloudNet-Perms, LuckPerms]
 
 commands:
   wscsync:
