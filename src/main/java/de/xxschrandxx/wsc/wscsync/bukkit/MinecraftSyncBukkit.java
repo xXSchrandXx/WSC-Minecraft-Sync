@@ -13,6 +13,7 @@ import de.xxschrandxx.wsc.wscbridge.core.IMinecraftBridgePlugin;
 import de.xxschrandxx.wsc.wscbridge.core.api.command.ISender;
 import de.xxschrandxx.wsc.wscsync.bukkit.api.MinecraftSyncBukkitAPI;
 import de.xxschrandxx.wsc.wscsync.bukkit.commands.WSCSyncBukkit;
+import de.xxschrandxx.wsc.wscsync.bukkit.listener.AddModuleListenerBukkit;
 import de.xxschrandxx.wsc.wscsync.bukkit.listener.MinecraftSyncBukkitJoinListener;
 import de.xxschrandxx.wsc.wscsync.bukkit.listener.WSCBridgeConfigReloadListenerBukkit;
 import de.xxschrandxx.wsc.wscsync.bukkit.listener.WSCBridgePluginReloadListenerBukkit;
@@ -78,6 +79,7 @@ public class MinecraftSyncBukkit extends JavaPlugin implements IMinecraftBridgeP
         if (getConfiguration().getBoolean(MinecraftSyncVars.Configuration.syncOnJoinEnabled)) {
             getServer().getPluginManager().registerEvents(new MinecraftSyncBukkitJoinListener(getInstance()), getInstance());
         }
+        getServer().getPluginManager().registerEvents(new AddModuleListenerBukkit(), getInstance());
 
         // Load commands
         getLogger().log(Level.INFO, "Loading Commands.");

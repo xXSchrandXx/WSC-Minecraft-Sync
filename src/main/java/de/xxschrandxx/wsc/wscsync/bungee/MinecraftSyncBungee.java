@@ -13,6 +13,7 @@ import de.xxschrandxx.wsc.wscbridge.core.IMinecraftBridgePlugin;
 import de.xxschrandxx.wsc.wscbridge.core.api.command.ISender;
 import de.xxschrandxx.wsc.wscsync.bungee.api.MinecraftSyncBungeeAPI;
 import de.xxschrandxx.wsc.wscsync.bungee.commands.WSCSyncBungee;
+import de.xxschrandxx.wsc.wscsync.bungee.listener.AddModuleListenerBungee;
 import de.xxschrandxx.wsc.wscsync.bungee.listener.MinecraftSyncBungeeJoinListener;
 import de.xxschrandxx.wsc.wscsync.bungee.listener.WSCBridgeConfigReloadListenerBungee;
 import de.xxschrandxx.wsc.wscsync.bungee.listener.WSCBridgePluginReloadListenerBungee;
@@ -82,6 +83,7 @@ public class MinecraftSyncBungee extends Plugin implements IMinecraftBridgePlugi
         if (getConfiguration().getBoolean(MinecraftSyncVars.Configuration.syncOnJoinEnabled)) {
             getProxy().getPluginManager().registerListener(getInstance(), new MinecraftSyncBungeeJoinListener(getInstance()));
         }
+        getProxy().getPluginManager().registerListener(getInstance(), new AddModuleListenerBungee());
 
         // load commands
         getLogger().log(Level.INFO, "Loading Commands.");
