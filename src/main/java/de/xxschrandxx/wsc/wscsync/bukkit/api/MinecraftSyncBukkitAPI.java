@@ -8,7 +8,6 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 import de.xxschrandxx.wsc.wscbridge.bukkit.api.MinecraftBridgeBukkitAPI;
-import de.xxschrandxx.wsc.wscbridge.core.api.MinecraftBridgeCoreAPI;
 import de.xxschrandxx.wsc.wscbridge.core.api.Response;
 import de.xxschrandxx.wsc.wscsync.core.api.IMinecraftSyncCoreAPI;
 import de.xxschrandxx.wsc.wscsync.core.api.MinecraftSyncCoreAPI;
@@ -21,8 +20,8 @@ public class MinecraftSyncBukkitAPI extends MinecraftBridgeBukkitAPI implements 
 
     protected final IPermissionHandler permHandler;
 
-    public MinecraftSyncBukkitAPI(URL url, PermissionPlugin permPlugin, Logger logger, MinecraftBridgeCoreAPI api) {
-        super(api.getID(), api.getAuth(), logger, api.isDebugModeEnabled());
+    public MinecraftSyncBukkitAPI(URL url, PermissionPlugin permPlugin, Logger logger, MinecraftBridgeBukkitAPI api) {
+        super(api, logger);
         this.url = url;
         switch(permPlugin) {
             case LuckPerms:

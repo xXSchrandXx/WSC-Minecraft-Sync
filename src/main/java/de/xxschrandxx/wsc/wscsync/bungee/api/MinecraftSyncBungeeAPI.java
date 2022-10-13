@@ -8,7 +8,6 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 import de.xxschrandxx.wsc.wscbridge.bungee.api.MinecraftBridgeBungeeAPI;
-import de.xxschrandxx.wsc.wscbridge.core.api.MinecraftBridgeCoreAPI;
 import de.xxschrandxx.wsc.wscbridge.core.api.Response;
 import de.xxschrandxx.wsc.wscsync.core.api.IMinecraftSyncCoreAPI;
 import de.xxschrandxx.wsc.wscsync.core.api.MinecraftSyncCoreAPI;
@@ -21,8 +20,8 @@ public class MinecraftSyncBungeeAPI extends MinecraftBridgeBungeeAPI implements 
 
     protected final IPermissionHandler permHandler;
 
-    public MinecraftSyncBungeeAPI(URL url, PermissionPlugin permPlugin, Logger logger, MinecraftBridgeCoreAPI api) {
-        super(api.getID(), api.getAuth(), logger, api.isDebugModeEnabled());
+    public MinecraftSyncBungeeAPI(URL url, PermissionPlugin permPlugin, Logger logger, MinecraftBridgeBungeeAPI api) {
+        super(api, logger);
         this.url = url;
         switch(permPlugin) {
             case LuckPerms:
