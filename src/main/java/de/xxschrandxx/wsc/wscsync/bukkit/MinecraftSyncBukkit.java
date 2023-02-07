@@ -23,6 +23,10 @@ import de.xxschrandxx.wsc.wscsync.core.api.permission.PermissionPlugin;
 public class MinecraftSyncBukkit extends JavaPlugin implements IMinecraftBridgePlugin<MinecraftSyncBukkitAPI> {
 
     // start of api part
+    public String getInfo() {
+        return null;
+    }
+
     private static MinecraftSyncBukkit instance;
 
     public static MinecraftSyncBukkit getInstance() {

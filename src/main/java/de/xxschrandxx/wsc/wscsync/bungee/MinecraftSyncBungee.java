@@ -26,6 +26,10 @@ import net.md_5.bungee.config.YamlConfiguration;
 public class MinecraftSyncBungee extends Plugin implements IMinecraftBridgePlugin<MinecraftSyncBungeeAPI> {
 
     // start of api part
+    public String getInfo() {
+        return null;
+    }
+
     private static MinecraftSyncBungee instance;
 
     public static MinecraftSyncBungee getInstance() {
